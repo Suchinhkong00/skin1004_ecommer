@@ -377,6 +377,11 @@ a    { text-decoration: none; }
   .hero-overlay {
     background: rgba(30, 50, 36, 0.7);
   }
+
+  @media (max-width: 575px) {
+    .logo-img { height: 28px; }
+  }
+
 }
 
 /* ── Why Choose Us cards ── */
@@ -430,4 +435,11 @@ a    { text-decoration: none; }
 .developer-credit {
   margin-top: 5px;
   font-size: 0.9rem;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  margin: 4px 0 8px;
 }
