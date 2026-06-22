@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 
-/* ─────────────────────────────────────────────
-   1. DESIGN TOKENS  (CSS custom properties)
-───────────────────────────────────────────── */
+html {
+    color-scheme: light;
+}
+/* 1. DESIGN TOKENS  (CSS custom properties) */
 :root {
   /* Brand palette */
   --clr-primary:    #4a7c59;
@@ -27,16 +28,16 @@
   --bs-body-font-family: 'Poppins', sans-serif;
   --bs-body-bg:          #fdf9f5;
   --bs-body-color:       #2d2d2d;
+
+   color-scheme: light;
 }
 
 
-/* ─────────────────────────────────────────────
-   2. GLOBAL RESET & BASE
-───────────────────────────────────────────── */
+/*2. GLOBAL RESET & BASE */
 body {
   font-family: 'Poppins', sans-serif;
-  background: var(--clr-bg);
-  color: var(--clr-text);
+  background: #fdf9f5 !important;
+    color: #2d2d2d !important;
   overflow-x: hidden;
 }
 
@@ -44,9 +45,7 @@ img { max-width: 100%; }
 a   { text-decoration: none; }
 
 
-/* ─────────────────────────────────────────────
-   3. BOOTSTRAP COLOUR OVERRIDES
-───────────────────────────────────────────── */
+/* 3. BOOTSTRAP COLOUR OVERRIDES */
 .btn-primary,
 .bg-primary {
   background-color: var(--clr-primary)   !important;
@@ -60,19 +59,13 @@ a   { text-decoration: none; }
   color:        var(--clr-primary) !important;
   border-color: var(--clr-primary) !important;
 }
-.btn-outline-primary:hover {
-  background-color: var(--clr-primary) !important;
-  color: #fff !important;
-}
+
 .text-primary   { color:        var(--clr-primary) !important; }
-.border-primary { border-color: var(--clr-primary) !important; }
 .bg-beige       { background:   var(--clr-bg2)     !important; }
 .bg-green       { background:   var(--clr-primary)  !important; }
 
+   /* 4. TYPOGRAPHY HELPERS */
 
-/* ─────────────────────────────────────────────
-   4. TYPOGRAPHY HELPERS
-───────────────────────────────────────────── */
 .accent { color: var(--clr-primary); }
 
 /* Small pill label above section headings */
@@ -90,9 +83,7 @@ a   { text-decoration: none; }
 }
 
 
-/* ─────────────────────────────────────────────
-   5. NAVBAR
-───────────────────────────────────────────── */
+/*5. NAVBAR*/
 .navbar {
   background: #fff !important;
   box-shadow: 0 2px 12px rgba(74, 124, 89, .10);
@@ -115,9 +106,7 @@ a   { text-decoration: none; }
 .nav-link.active { color: var(--clr-primary) !important; }
 
 
-/* ─────────────────────────────────────────────
-   6. PAGE BANNER  (inner pages)
-───────────────────────────────────────────── */
+/*6. PAGE BANNER  (inner pages)*/
 .page-banner {
   background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-d) 100%);
   color: #fff;
@@ -146,17 +135,15 @@ a   { text-decoration: none; }
 .page-banner .breadcrumb-item + .breadcrumb-item::before { color: rgba(255, 255, 255, .5); }
 
 
-/* ─────────────────────────────────────────────
-   7. HERO SECTION  — Hero centered layout
-───────────────────────────────────────────── */
+/* 7. HERO SECTION  — Hero centered layout */
 .hero-section {
   min-height: 100vh;
   position: relative;
   display: flex;
-  align-items: center;       /* vertically center content */
-  justify-content: center;   /* horizontally center content */
+  align-items: center;       
+  justify-content: center;  
   overflow: hidden;
-  margin-top: 56px;          /* clear fixed navbar */
+  margin-top: 56px;         
 }
 
 /* Full-bleed background image */
@@ -188,7 +175,7 @@ a   { text-decoration: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;        /* centers the col within the row */
+  margin: 0 auto;        
 }
 
 .hero-eyebrow {
@@ -228,9 +215,7 @@ a   { text-decoration: none; }
 }
 
 
-/* ─────────────────────────────────────────────
-   8. STATS STRIP
-───────────────────────────────────────────── */
+/* 8. STATS STRIP */
 .stat-card {
   text-align: center;
   color: #fff;
@@ -249,9 +234,7 @@ a   { text-decoration: none; }
 }
 
 
-/* ─────────────────────────────────────────────
-   9. FEATURE CARDS
-───────────────────────────────────────────── */
+/* 9. FEATURE CARDS*/
 .feature-card {
   background: #fff;
   border-radius: 16px;
@@ -268,9 +251,7 @@ a   { text-decoration: none; }
 .feature-card h5 { font-weight: 700; margin-bottom: 8px; }
 
 
-/* ─────────────────────────────────────────────
-   10. PRODUCT CARDS
-───────────────────────────────────────────── */
+/* 10. PRODUCT CARDS */
 .product-card {
   background: #fff;
   border-radius: 16px;
@@ -336,11 +317,8 @@ a   { text-decoration: none; }
 }
 
 
-/* ─────────────────────────────────────────────
-   11. WHY CHOOSE US  CARDS
-───────────────────────────────────────────── */
-/* Removed unused styles: star ratings, testimonial-stars,
-   checkmark icons removed from this section */
+/*  11. WHY CHOOSE US  CARDS */
+
 
 .why-card {
   background: #fff;
@@ -359,13 +337,10 @@ a   { text-decoration: none; }
 /* Coloured icon wrappers */
 .why-icon-wrap i { font-size: 1.6rem; color: var(--clr-primary); }
 
-.why-icon-wrap--peach   { background: #fdebd0; }
 .why-icon-wrap--peach i { color: var(--clr-accent); }
 
-.why-icon-wrap--blue   { background: #dde8f5; }
 .why-icon-wrap--blue i { color: #3a6fc4; }
 
-.why-icon-wrap--teal   { background: #d0f0ec; }
 .why-icon-wrap--teal i { color: #2a9d8f; }
 
 .why-icon-wrap--gold   { background: #fef3cd; }
@@ -385,17 +360,8 @@ a   { text-decoration: none; }
 }
 
 
-/* ─────────────────────────────────────────────
-   12. BENEFIT CARDS
-───────────────────────────────────────────── */
-.benefit-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 32px 28px;
-  box-shadow: 0 4px 20px rgba(74, 124, 89, .08);
-  transition: transform .25s, box-shadow .25s;
-  height: 100%;
-}
+/*12. BENEFIT CARDS */
+
 .benefit-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 32px rgba(74, 124, 89, .16);
@@ -414,11 +380,7 @@ a   { text-decoration: none; }
 .benefit-card h5 { font-weight: 700; margin-bottom: 8px; }
 
 
-/* ─────────────────────────────────────────────
-   13. TESTIMONIAL CARDS
-   Removed unused styles: .testimonial-stars (.stars i kept),
-   duplicate testimonial-card block consolidated here
-───────────────────────────────────────────── */
+/*13. TESTIMONIAL CARDS */
 .testimonial-card {
   background: #fff;
   border-radius: 16px;
@@ -458,9 +420,7 @@ a   { text-decoration: none; }
 .author-location { font-size: .78rem; color: var(--clr-text-m); }
 
 
-/* ─────────────────────────────────────────────
-   14. CTA BANNER
-───────────────────────────────────────────── */
+/* 14. CTA BANNER*/
 .cta-box {
   background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-primary-d) 100%);
   border-radius: 24px;
@@ -472,9 +432,7 @@ a   { text-decoration: none; }
 .cta-box p  { opacity: .85; margin: 12px 0 28px; }
 
 
-/* ─────────────────────────────────────────────
-   15. ABOUT SECTION
-───────────────────────────────────────────── */
+/* 15. ABOUT SECTION */
 .about-img-wrap { position: relative; }
 .about-img {
   width: 100%;
@@ -497,9 +455,7 @@ a   { text-decoration: none; }
 .badge-label { font-size: .75rem; font-weight: 500; opacity: .9; }
 
 
-/* ─────────────────────────────────────────────
-   16. MISSION / VISION CARDS
-───────────────────────────────────────────── */
+/*16. MISSION / VISION CARDS */
 .mv-card {
   background: #fff;
   border-radius: 16px;
@@ -509,9 +465,7 @@ a   { text-decoration: none; }
 .mv-card h4 { color: var(--clr-primary); }
 
 
-/* ─────────────────────────────────────────────
-   17. ROUTINE STEPS
-───────────────────────────────────────────── */
+/* 17. ROUTINE STEPS */
 .routine-step {
   text-align: center;
   background: #fff;
@@ -541,16 +495,8 @@ a   { text-decoration: none; }
 .routine-step h5 { font-weight: 700; margin-bottom: 6px; }
 
 
-/* ─────────────────────────────────────────────
-   18. FAQ ACCORDION
-───────────────────────────────────────────── */
-.faq-item {
-  background: #fff;
-  border: 1px solid var(--clr-border);
-  border-radius: 14px;
-  margin-bottom: 12px;
-  overflow: hidden;
-}
+/*18. FAQ ACCORDION*/
+
 .faq-item summary {
   list-style: none;
   cursor: pointer;
@@ -567,12 +513,7 @@ a   { text-decoration: none; }
   border-color: var(--clr-primary-l);
   box-shadow: 0 4px 18px rgba(74, 124, 89, .07);
 }
-.faq-content {
-  padding: 0 20px 18px;
-  color: var(--clr-text-m);
-  line-height: 1.7;
-  font-size: .92rem;
-}
+
 .faq-item summary .icon {
   transition: transform .3s;
   color: var(--clr-primary);
@@ -587,9 +528,7 @@ a   { text-decoration: none; }
 }
 
 
-/* ─────────────────────────────────────────────
-   19. CONTACT FORM & INFO
-───────────────────────────────────────────── */
+/* 19. CONTACT FORM &  */
 .contact-form .form-control,
 .contact-form select.form-control {
   border-radius: 10px;
@@ -810,7 +749,7 @@ a   { text-decoration: none; }
   .back-to-top { bottom: 20px; right: 16px; width: 40px; height: 40px; font-size: 1rem; }
 }
 
-/* ── Small Mobile (≤ 480px)  — Hero centered layout ── */
+/* ── Small Mobile (≤ 480px)  */
 @media (max-width: 480px) {
   .hero-section {
     min-height: 100vh;
