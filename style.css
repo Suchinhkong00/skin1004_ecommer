@@ -143,7 +143,10 @@ a   { text-decoration: none; }
   align-items: center;       
   justify-content: center;  
   overflow: hidden;
-  margin-top: 56px;         
+  margin-top: 56px;    
+
+  
+
 }
 
 /* Full-bleed background image */
@@ -156,6 +159,8 @@ a   { text-decoration: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  
 }
 
 /* Dark gradient overlay */
@@ -688,6 +693,8 @@ a   { text-decoration: none; }
   .hero-title { font-size: 3.6rem; }
   .hero-sub   { max-width: 560px; }
   .cta-box    { padding: 80px 64px; }
+
+ 
 }
 
 /* ── Laptop (992px – 1199px) ── */
@@ -697,6 +704,10 @@ a   { text-decoration: none; }
   .feature-card,
   .why-card,
   .benefit-card { padding: 28px 22px; }
+  .hero-bg img {
+    object-position: 70% center;
+  }
+
 }
 
 /* ── Tablet (768px – 991px) ── */
@@ -716,6 +727,9 @@ a   { text-decoration: none; }
 
   .footer        { padding: 48px 0 0; }
   .footer-bottom { flex-direction: column; align-items: center; text-align: center; }
+  .hero-bg img {
+    object-position: 70% center;
+  }
 }
 
 /* ── Mobile (481px – 767px)  — Hero centered layout ── */
@@ -731,6 +745,7 @@ a   { text-decoration: none; }
     padding: 20px 16px;
     align-items: center;
   }
+  
   .hero-title { font-size: 2rem; line-height: 1.2; }
   .hero-sub   { font-size: .92rem; max-width: 100%; }
   .hero-overlay { background: rgba(30, 50, 36, .70); }
@@ -747,6 +762,9 @@ a   { text-decoration: none; }
   .footer-bottom { flex-direction: column; align-items: center; text-align: center; gap: 6px; }
 
   .back-to-top { bottom: 20px; right: 16px; width: 40px; height: 40px; font-size: 1rem; }
+  .hero-bg img {
+    object-position: 70% center;
+  }
 }
 
 /* ── Small Mobile (≤ 480px)  */
@@ -762,6 +780,10 @@ a   { text-decoration: none; }
     padding: 16px 12px;
     align-items: center;
   }
+ .hero-bg img {
+    object-position: 70% center;
+  }
+  
   .hero-title   { font-size: 1.7rem; line-height: 1.2; }
   .hero-eyebrow { font-size: .7rem; }
   .hero-sub     { font-size: .88rem; max-width: 100%; margin-top: 12px; }
